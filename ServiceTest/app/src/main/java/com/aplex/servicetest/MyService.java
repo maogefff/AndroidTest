@@ -10,13 +10,21 @@ import android.widget.Toast;
 public class MyService extends Service {
     String TAG = "MyService";
 
-    public class MyServiceBinder extends Binder implements IMyServiceBinder{
+//    public class MyServiceBinder extends Binder implements IMyServiceBinder{
+//
+//        @Override
+//        public void callService() {
+//            InnercallService();
+//        }
+//    }
+        public class MyServiceBinder extends IMyServiceBinder.Stub{
 
         @Override
         public void callService() {
             InnercallService();
         }
     }
+
     @Override
     public IBinder onBind(Intent intent) {
         return new MyServiceBinder();
