@@ -10,5 +10,5 @@ Service远程服务测试（客户端）目录为ServiceRemote
 Service服务测试；目录为ServiceTest  
 版本V2.0：（提供远程服务AIDL的服务）
 
-### develop-ServiceRemote分支（新的）： 
+### develop-ServiceRemote2分支（新的）： 
 Service远程服务测试（客户端）目录为ServiceRemote
