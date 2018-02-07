@@ -17,7 +17,7 @@ public class MyService extends Service {
 //            InnercallService();
 //        }
 //    }
-        public class MyServiceBinder extends IMyServiceBinder.Stub{
+        public class MyServiceBinder extends IMyServiceBinder.Stub {
 
         @Override
         public void callService() {
@@ -44,6 +44,7 @@ public class MyService extends Service {
     }
 
     public void InnercallService(){
-        Toast.makeText(this, "呼叫服务", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "呼叫服务", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "我是远程的呼叫服务");
     }
 }
