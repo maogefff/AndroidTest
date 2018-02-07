@@ -5,6 +5,7 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -88,7 +89,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 unbindService(myServiceConnection);
                 break;
             case R.id.callServiceID:  //本地调用第二个服务中的方法
-                myServiceBinder.callService();
+                try {
+                    myServiceBinder.callService();
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
                 break;
         }
     }
